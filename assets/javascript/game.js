@@ -1,0 +1,2 @@
+var categoryShort = ["small","abbreviated","terse","condensed","little","concise","vertically challenged","brief","quick","succinct"]
+var categorySweet = ["ice cream","cookie","brownie","hot fudge sundae","popsicle","pie","cheesecake","milkshake","candy bar","donut"]
