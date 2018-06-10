@@ -3,7 +3,7 @@ var selectableWords = ["MONOPOLY", "CLUE","SORRY","CANDYLAND","MOUSETRAP","SCRAB
 var guessedLetters = [];  //letters user has guessed
 var currentWordIndex;  //index of the current word in the array
 var guessingWord = [];  // word actually getting built
-const maxTries = 10;  //starting number of lives
+var maxTries = 10;  //starting number of lives
 var remainingGuesses = 0;  //lives  player has left
 var hasFinished = false;       
 var wins = 0;
@@ -68,7 +68,7 @@ function checkLoss(){
    }
 }
 
-//makkng a guess
+//making a guess
 function makeGuess(letter) {
    if (remainingGuesses > 0) {
    if (guessedLetters.indexOf(letter) === -1) {
@@ -78,15 +78,13 @@ function makeGuess(letter) {
    }
 };
 
-
 //event listener
 document.onkeydown = function(event) {
-    // If we finished a game, dump one keystroke and reset.
    if(hasFinished) {
       resetGame();
       hasFinished = false;
    } else {
-      // Check to make sure a-z was pressed.
+      //looking for a letter a-z
       if(event.keyCode >= 65 && event.keyCode <= 90) {
          makeGuess(event.key.toUpperCase());
          updateDisplay();
