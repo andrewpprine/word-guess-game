@@ -9,13 +9,21 @@
 <body>
    <div class="wrapper">
       <div class="container">
-         <h1 id="titleDiv">Hangman<span id="titleSpan">: A game of games</span></h1>
+         <h1 id="titleDiv">Word Guess Game</h1>
+         <h5>aka Hangman, but with neither hanging nor men</h5>
          <hr>
-         <img src="assets/images/openingFrame.jpeg" id="profilePhoto" width=500px height=auto>
-         <div id="gameArea">
-            <h3>Already guessed: <span id="counterGuessed"></span></h3>
+         <h2>Category: Classic Board Games</h2>
+         <div id="gamePlay">
+            <h3 id="currentWord"></h3>
+         </div>
+         <div id="gameInfo"> 
             <h3>Lives remaining: <span id="counterLives"></span></h3>
-            <h3>Total wins: <span id="totalWins"></span></h3>
+            <h3>Already guessed: <span id="counterGuessed"></span></h3>
+            <h3>Total wins: <span id="counterWins"></span></h3>
+         </div>
+         <div>
+            <img src="assets/images/winner.jpg" class="gameOverImage" id="youWinImage" alt="You win!">
+            <img src="assets/images/loser.jpg" class="gameOverImage" id="youLoseImage" alt="You lose!">
          </div>
       </div>
    </div>
