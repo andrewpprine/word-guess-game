@@ -1,8 +1,14 @@
+body {
+   background-color: black;
+   color: yellow;
+}
 .container {
    text-align: center;
 }
 .gameOverImage {
    display: none;
+   margin-left: auto;
+   margin-right: auto;
 }
 #titleDiv {
    font-size: 50px;
