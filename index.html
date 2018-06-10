@@ -2,24 +2,22 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   <script src="assets/javascipts/game.js"></script>
    <title>H _ n g M _ n</title>
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   <script src="assets/javascript/game.js" type="text/javascript"></script>
 </head>
 <body>
-   <!-- <div class="wrapper"> -->
-      <!-- <div class="container"> -->
-         <h1 id="gameTitleDiv">Hangman<span id="gameTitleSpan">: Short and Sweet</span></h1>
-         <br>
-         <h3 id="directions">Choose Your Destiny</h3>
-         <div id="categoryPicker"><span><button>Short</button> </span><span><button>Sweet</button></span></div>
-         <br>
-         <div></div>
+   <div class="wrapper">
+      <div class="container">
+         <h1 id="titleDiv">Hangman<span id="titleSpan">: A game of games</span></h1>
          <hr>
          <img src="assets/images/openingFrame.jpeg" id="profilePhoto" width=500px height=auto>
-         <div>Already guessed: <span id="counterGuessed"></span></div>
-         <div>Lives remaining: <span id="counterLives"></span></div>
-      <!-- </div> -->
-   <!-- </div> -->
+         <div id="gameArea">
+            <h3>Already guessed: <span id="counterGuessed"></span></h3>
+            <h3>Lives remaining: <span id="counterLives"></span></h3>
+            <h3>Total wins: <span id="totalWins"></span></h3>
+         </div>
+      </div>
+   </div>
 </body>
 </html>
