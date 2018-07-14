@@ -1,24 +1,24 @@
-var selectableWords = ["MONOPOLY", "CLUE","SORRY","CANDYLAND","MOUSETRAP","SCRABBLE","YAHTZEE","OPERATION","TROUBLE","BOGGLE","TWISTER","JUMANJI"];
+var wordList = ["MONOPOLY", "CLUE","SORRY","CANDYLAND","MOUSETRAP","SCRABBLE","YAHTZEE","OPERATION","TROUBLE","BOGGLE","TWISTER","JUMANJI"];
 
 var guessedLetters = [];  //letters user has guessed
 var currentWordIndex;  //index of the current word in the array
 var guessingWord = [];  // word actually getting built
-var maxTries = 10;  //starting number of lives
-var remainingGuesses = 0;  //lives  player has left
+var remainingGuesses  //lives player has left
 var hasFinished = false;       
 var wins = 0;
+var losses = 0;
 
 // resets the game
-function resetGame() {
-   remainingGuesses = maxTries;
-   currentWordIndex = Math.floor(Math.random() * (selectableWords.length));
+function reset() {
+   remainingGuesses = 10;
+   currentWordIndex = Math.floor(Math.random() * (wordList.length));
    guessedLetters = [];
    guessingWord = [];
-   for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
+   for (var i = 0; i < wordList[currentWordIndex].length; i++) {
       guessingWord.push("_ ");
    }   
-   document.getElementById("youLoseImage").style.cssText = "display: none";
-   document.getElementById("youWinImage").style.cssText = "display: none";
+//    document.getElementById("youLoseImage").style.cssText = "display: none";
+//    document.getElementById("youWinImage").style.cssText = "display: none";
 };
 
 //updates the visible content
@@ -37,8 +37,8 @@ function updateDisplay() {
 function evaluateGuess(letter) {
    // Array to store positions of letters in string
    var positions = [];
-   for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
-      if(selectableWords[currentWordIndex][i] === letter) {
+   for (var i = 0; i < wordList[currentWordIndex].length; i++) {
+      if(wordList[currentWordIndex][i] === letter) {
          positions.push(i);
       }
    }
@@ -53,8 +53,9 @@ function evaluateGuess(letter) {
 
 //if no remaining underscores, player wins
 function checkWin() {
-   if(guessingWord.indexOf("_ ") === -1) {
-      document.getElementById("youWinImage").style.cssText = "display: block";
+   if(guessingWord.indexOf("_ ") == -1) {
+      // document.getElementById("youWinImage").style.cssText = "display: block";
+      alert('You won!');
       wins++;
       hasFinished = true;
    }
@@ -63,7 +64,9 @@ function checkWin() {
 //if out of guesses, player loses
 function checkLoss(){
    if(remainingGuesses <= 0) {
-      document.getElementById("youLoseImage").style.cssText = "display: block";
+      // document.getElementById("youLoseImage").style.cssText = "display: block";
+      alert('You lost!');
+      losses++;
       hasFinished = true;
    }
 }
@@ -81,7 +84,7 @@ function makeGuess(letter) {
 //event listener
 document.onkeydown = function(event) {
    if(hasFinished) {
-      resetGame();
+      reset();
       hasFinished = false;
    } else {
       //looking for a letter a-z

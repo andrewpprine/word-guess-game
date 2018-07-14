@@ -1,19 +1,86 @@
 body {
    background-color: black;
    color: yellow;
-   font-family: 'Montserrat', sans-serif;
+   font-family: 'Pangolin', cursive;
+   font-size: 25px;
 }
 .container {
    text-align: center;
+   margin: 20px 40px;
+}
+#gamePlay {
+   background-color: yellow;
+   color: black;
+   padding: 20px 10px;
+   margin: 50px 35%;
 }
 .gameOverImage {
    display: none;
    margin-left: auto;
    margin-right: auto;
 }
-#titleDiv {
-   font-size: 50px;
+#title {
+   font-size: 100px;
+   font-family: 'Eater', cursive;
+   color: black;
+   padding: 30px;
+   background: radial-gradient(yellow 5%,orange 15%, #543f0e 45%, black, black); 
 }
 /* #fillerImage {
    visibility: hidden;
+} */
+
+/* @media only screen and (max-width: 980px) {
+   #crystals img{
+      width: 150px;
+      height: 150px;
+   }
+}
+@media only screen and (max-width: 768px) {
+   #crystals img{
+      width: 125px;
+      height: 125px;
+   }
+}
+@media only screen and (max-width: 640px) {
+   #crystals img{
+      width: 100px;
+      height: 100px;
+   }
+}
+@media only screen and (max-width: 500px) {
+   #crystals img{
+      width: 80px;
+      height: 80px;
+   }
+} */
+
+/* body {
+   color: white;
+   background-image: url("../images/crystalWallpaper.jpeg");
+   font-family: 'Patrick Hand', cursive;
+}
+
+#directions {
+   font-size: 20px;
+   margin: 20px 20%;
+}
+#directions h2 {
+   font-size: 25px;
+   text-decoration-line: underline;
+}
+#directions p{
+   padding: 4px;
+}
+#targetScore {
+   font-size: 30px;
+   color: #d93437;
+}
+#currentScore {
+   font-size: 30px;
+   color: #2dc937;
+}
+#scoreTally {
+   font-size: 20px;
+}
 } */

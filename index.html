@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>H _ n g M _ n</title>
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-   <script src="assets/javascript/game.js" type="text/javascript"></script>
+   <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Eater|Pangolin" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="assets/javascript/game.js"></script>
 </head>
 <body>
-   <div class="wrapper">
-      <div class="container">
-         <h1 id="titleDiv">Word Guess Game</h1>
-         <h5>aka Hangman, but with neither hanging nor men</h5>
-         <hr>
-         <h2>Category: Classic Board Games</h2>
-         <div id="gamePlay">
-            <h3 id="currentWord"></h3>
-         </div>
-         <div id="gameInfo"> 
-            <h3>Lives remaining: <span id="counterLives"></span></h3>
-            <h3>Already guessed: <span id="counterGuessed"></span></h3>
-            <h3>Total wins: <span id="counterWins"></span></h3>
-         </div>
-         <div>
-            <!-- <img src="assets/images/blackFiller.png" id=
-            "fillerImage" alt="Empty black space."> -->
-            <img src="assets/images/winner.jpg" class="gameOverImage" id="youWinImage" alt="You win!">
-            <img src="assets/images/loser.jpg" class="gameOverImage" id="youLoseImage" alt="You lose!">
-         </div>
+   <div class="container">
+      <div id="title"><h1>Hangman</h1></div>
+      <hr>
+      <div>Category: Classic Board Games</div>
+      <div id="gamePlay">
+         <span id="currentWord"></span>
+      </div>
+      <div id="gameInfo"> 
+         <div>Lives remaining: <span id="counterLives"></span></div>
+         <div>Already guessed: <span id="counterGuessed"></span></div>
+         <br>
+         <div>Total wins: <span id="counterWins"></span></div>
+         <div>Total losses: <span id="counterLosses"></span></div>
+      </div>
+      <div>
+         <!-- <img src="assets/images/blackFiller.png" id=
+         "fillerImage" alt="Empty black space."> -->
+         <!-- <img src="assets/images/winner.jpg" class="gameOverImage" id="youWinImage" alt="You win!"> -->
+         <img src="assets/images/loser.jpg" class="gameOverImage" id="youLoseImage" alt="You lose!">
       </div>
    </div>
 </body>
